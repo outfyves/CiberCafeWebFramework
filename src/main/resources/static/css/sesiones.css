@@ -1,0 +1,224 @@
+/* sesiones.css */
+
+.sessions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+    padding-bottom: var(--spacing-lg);
+}
+
+.pc-card {
+    background-color: var(--bg-white);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+    box-shadow: var(--shadow-light);
+    border-top: 5px solid var(--text-light);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.pc-card.active {
+    border-top-color: var(--success-color);
+    box-shadow: var(--shadow-medium);
+}
+
+/* estado de mantenimiento */
+.pc-card.mantenimiento {
+    border-top-color: var(--danger-color);
+    opacity: 0.7;
+}
+
+.pc-card.mantenimiento .status-badge {
+    background: #e74c3c !important;
+    color: white;
+}
+
+.pc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pc-name {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+}
+
+.pc-status {
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    border-radius: 50px;
+    background: var(--bg-gray);
+    text-transform: uppercase;
+}
+
+.pc-card.active .pc-status {
+    background: rgba(46, 204, 113, 0.2);
+    color: var(--success-color);
+}
+
+.pc-body {
+    text-align: center;
+    padding: var(--spacing-sm) 0;
+}
+
+.timer-display {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--secondary-light);
+    margin: 5px 0;
+}
+
+.pc-card.active .timer-display {
+    color: var(--primary-color);
+}
+
+.pc-footer {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-session {
+    flex: 1;
+    padding: 0.6rem;
+    border: none;
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    font-weight: 600;
+    transition: opacity 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.btn-start {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-stop {
+    background-color: var(--danger-color);
+    color: white;
+    display: none; /* Oculto por defecto */
+}
+
+.pc-card.active .btn-start { display: none; }
+.pc-card.active .btn-stop { display: flex; }
+
+.client-name {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    height: 1.2rem;
+}
+
+.timer-finished {
+    color: #e74c3c !important;
+    animation: pulse-red 1s infinite;
+    font-weight: bold;
+}
+
+@keyframes pulse-red {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.countdown-mode {
+    border-left: 5px solid #f1c40f; /* Color amarillo para identificar prepagos */
+}
+
+/* tarifa/hora mostrada en tarjetas de sesión */
+.pc-rate {
+    font-size: 0.8rem;
+    color: var(--text-medium);
+    margin-left: 0.5rem;
+}
+
+/* --- ESTILOS MODAL INICIAR SESIÓN --- */
+.time-mode-selector {
+    display: flex;
+    gap: 20px;
+    margin: 10px 0;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.time-presets {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.btn-preset {
+    background: #fff;
+    border: 1px solid var(--border-color);
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    transition: all 0.2s;
+}
+
+.btn-preset:hover {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.custom-time-input {
+    border-top: 1px dashed #ddd;
+    padding-top: 15px;
+}
+
+#timeConversion {
+    display: block;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.client-selection-container select {
+    background: #fff;
+    font-weight: 500;
+}
+
+.session-preview {
+    background: #fdfdfd;
+    border-radius: 8px;
+}
+
+.btn-action {
+    flex: 1;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: filter 0.2s;
+}
+
+.btn-action:hover {
+    filter: brightness(0.9);
+}
+
+.btn-action.start {
+    background: var(--success-color);
+    color: white;
+}
+
+.btn-action.stop {
+    background: var(--warning-color);
+    color: white;
+}
