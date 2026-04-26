@@ -57,8 +57,14 @@ Esta versión se centra en el control administrativo y operativo del negocio:
     ```powershell
     mvn spring-boot:run
     ```
-    *(Si no tienes Maven en el PATH, puedes usar `mvnw.cmd spring-boot:run` si el wrapper está presente, o abrir la carpeta en VS Code y usar la extensión de Spring Boot).*
 3.  Abre tu navegador en: `http://localhost:8080`
+
+### 🛠️ Ejecución en NetBeans IDE (Recomendado para evaluadores)
+Este proyecto es un proyecto **Maven** estándar, lo que facilita su revisión en NetBeans:
+1.  **Abrir Proyecto:** `File` -> `Open Project` -> Seleccionar la carpeta `JESUS_MORALES_AA3_EV01`.
+2.  **Cargar Dependencias:** Si aparecen alertas, hacer clic derecho en el proyecto y seleccionar **"Clean and Build"**.
+3.  **Ejecutar:** Clic derecho en el proyecto -> **Run**.
+4.  **Clase Principal:** Si el IDE pregunta, seleccionar `com.cibercafe.CiberCafeApplication`.
 
 ---
 
