@@ -4,6 +4,7 @@
 
 Este proyecto representa la entrega del módulo central (**Core**) de un sistema de gestión para un Cibercafé, desarrollado utilizando el ecosistema de **Spring Boot**. Cumple con los requerimientos de la fase de codificación aplicando arquitecturas modernas y estándares de la industria.
 
+Repocitorio principal: https://github.com/outfyves/CiberCafeWeb
 ---
 
 ## 🚀 Funcionalidades Actuales
